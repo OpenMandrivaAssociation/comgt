@@ -1,19 +1,17 @@
 %define name comgt
 %define old_name gcom
-%define version 0.3
-%define release %mkrel 2
+%define version 0.32
+%define release %mkrel 1
 
 Summary: GPRS/EDGE/3G/HSDPA datacard control tool
 Name: %{name}
 Version: %{version}
 Release: %{release}
-Source0: http://www.pharscape.org/3G/%{name}/%{name}%{version}.tar.bz2
+Source0: http://www.pharscape.org/3G/%{name}/%{name}.%{version}.tgz
 License: GPL
 Group: Communications
 Url: http://www.pharscape.org/content/view/46/70/
 BuildRoot: %{_tmppath}/%{name}-%{version}-%{release}-buildroot
-Provides: %{old_name}
-Obsoletes: %{old_name}
 
 %description
 comgt is a datacard control tool for Option GlobeTrotter
@@ -27,7 +25,7 @@ comgt has some features that are rarely found in other utilities of the
 same type.
 
 %prep
-%setup -q -c %{name}-%{version}
+%setup -q -n %{name}.%{version}
 
 %build
 %make
@@ -35,15 +33,15 @@ same type.
 %install
 rm -rf $RPM_BUILD_ROOT
 install -d -m 755 $RPM_BUILD_ROOT%{_sbindir}
-install -m 755 %{old_name} $RPM_BUILD_ROOT%{_sbindir}
+install -m 755 %{name} $RPM_BUILD_ROOT%{_sbindir}
 install -d -m 755 $RPM_BUILD_ROOT/%{_mandir}/man1
-install -m 755 %{old_name}.1 $RPM_BUILD_ROOT/%{_mandir}/man1
+install -m 644 %{name}.1 $RPM_BUILD_ROOT/%{_mandir}/man1
 
 %clean
 rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(-,root,root)
-%doc CHANGELOG GPRS.txt TODO UMTS.txt
-%{_sbindir}/%{old_name}
-%{_mandir}/man1/%{old_name}.1*
+%doc CHANGELOG gprs.txt TODO umts.txt
+%{_sbindir}/%{name}
+%{_mandir}/man1/%{name}.1*

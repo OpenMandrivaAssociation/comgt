@@ -11,6 +11,7 @@ Source0: http://www.pharscape.org/3G/%{name}/%{name}.%{version}.tgz
 License: GPL
 Group: Communications
 Url: http://www.pharscape.org/content/view/46/70/
+BuildRoot: %{_tmppath}/%{name}-%{version}-%{release}-buildroot
 Provides: %{old_name}
 Obsoletes: %{old_name}
 

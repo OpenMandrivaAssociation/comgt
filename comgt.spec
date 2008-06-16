@@ -1,7 +1,7 @@
 %define name comgt
 %define old_name gcom
 %define version 0.32
-%define release %mkrel 5
+%define release %mkrel 6
 
 Summary: GPRS/EDGE/3G/HSDPA datacard control tool
 Name: %{name}

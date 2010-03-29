@@ -29,7 +29,7 @@ same type.
 %patch0 -p1 -b .str_format~
 
 %build
-%make
+%make CFLAGS="-c %{optflags}" LDFLAGS="%{ldflags}"
 
 %install
 rm -rf %{buildroot}

@@ -8,7 +8,7 @@ Source0:	http://www.pharscape.org/3G/%{name}/%{name}.%{version}.tgz
 Patch0:		comgt-0.32-string-format.patch
 License:	GPLv2+
 Group:		Communications
-Url:		http://www.pharscape.org/content/view/46/70/
+URL:		http://pharscape.org/comgt.html
 BuildRoot:	%{_tmppath}/%{name}-%{version}-%{release}-buildroot
 Provides:	%{old_name}
 Obsoletes:	%{old_name}

@@ -43,8 +43,9 @@ ln -s %{_sbindir}/%{name} %{buildroot}%{_sbindir}/%{old_name}
 rm -rf %{buildroot}
 
 %files
-%defattr(-,root,root)
+%defattr(644,root,root,755)
 %doc CHANGELOG gprs.txt TODO umts.txt
+%{_mandir}/man1/%{name}.1*
+%defattr(755,root,root,755)
 %{_sbindir}/%{name}
 %{_sbindir}/%{old_name}
-%{_mandir}/man1/%{name}.1*

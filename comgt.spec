@@ -5,6 +5,7 @@ Name:		comgt
 Version:	0.32
 Release:	%mkrel 10
 Source0:	http://www.pharscape.org/3G/%{name}/%{name}.%{version}.tgz
+Patch0:		comgt-0.32-string-format.patch
 License:	GPLv2+
 Group:		Communications
 Url:		http://www.pharscape.org/content/view/46/70/
@@ -25,6 +26,7 @@ same type.
 
 %prep
 %setup -q -n %{name}.%{version}
+%patch0 -p1 -b .str_format~
 
 %build
 %make

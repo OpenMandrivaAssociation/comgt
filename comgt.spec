@@ -3,17 +3,17 @@
 %define version 0.32
 %define release %mkrel 9
 
-Summary: GPRS/EDGE/3G/HSDPA datacard control tool
-Name: %{name}
-Version: %{version}
-Release: %{release}
-Source0: http://www.pharscape.org/3G/%{name}/%{name}.%{version}.tgz
-License: GPL
-Group: Communications
-Url: http://www.pharscape.org/content/view/46/70/
-BuildRoot: %{_tmppath}/%{name}-%{version}-%{release}-buildroot
-Provides: %{old_name}
-Obsoletes: %{old_name}
+Summary:	GPRS/EDGE/3G/HSDPA datacard control tool
+Name:		%{name}
+Version:	%{version}
+Release:	%{release}
+Source0:	http://www.pharscape.org/3G/%{name}/%{name}.%{version}.tgz
+License:	GPL
+Group:		Communications
+Url:		http://www.pharscape.org/content/view/46/70/
+BuildRoot:	%{_tmppath}/%{name}-%{version}-%{release}-buildroot
+Provides:	%{old_name}
+Obsoletes:	%{old_name}
 
 %description
 comgt is a datacard control tool for Option GlobeTrotter
@@ -33,15 +33,13 @@ same type.
 %make
 
 %install
-rm -rf $RPM_BUILD_ROOT
-install -d -m 755 $RPM_BUILD_ROOT%{_sbindir}
-install -m 755 %{name} $RPM_BUILD_ROOT%{_sbindir}
-install -d -m 755 $RPM_BUILD_ROOT/%{_mandir}/man1
-install -m 644 %{name}.1 $RPM_BUILD_ROOT/%{_mandir}/man1
-ln -s %{_sbindir}/%{name} $RPM_BUILD_ROOT%{_sbindir}/%{old_name}
+rm -rf %{buildroot}
+install -m755 %{name} -D %{buildroot}%{_sbindir}/%{name}
+install -m644 %{name}.1 -D %{buildroot}%{_mandir}/man1/%{name}.1
+ln -s %{_sbindir}/%{name} %{buildroot}%{_sbindir}/%{old_name}
 
 %clean
-rm -rf $RPM_BUILD_ROOT
+rm -rf %{buildroot}
 
 %files
 %defattr(-,root,root)

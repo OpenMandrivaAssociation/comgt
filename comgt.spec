@@ -5,7 +5,7 @@ Name:		comgt
 Version:	0.32
 Release:	%mkrel 10
 Source0:	http://www.pharscape.org/3G/%{name}/%{name}.%{version}.tgz
-License:	GPL
+License:	GPLv2+
 Group:		Communications
 Url:		http://www.pharscape.org/content/view/46/70/
 BuildRoot:	%{_tmppath}/%{name}-%{version}-%{release}-buildroot

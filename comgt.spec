@@ -6,6 +6,7 @@ Version:	0.32
 Release:	%mkrel 10
 Source0:	http://www.pharscape.org/3G/%{name}/%{name}.%{version}.tgz
 Patch0:		comgt-0.32-string-format.patch
+Patch1:		comgt-0.32-fix-man-page-typo.patch
 License:	GPLv2+
 Group:		Communications
 URL:		http://pharscape.org/comgt.html
@@ -27,6 +28,7 @@ same type.
 %prep
 %setup -q -n %{name}.%{version}
 %patch0 -p1 -b .str_format~
+%patch1 -p1 -b .man_typo~
 
 %build
 %make CFLAGS="-c %{optflags}" LDFLAGS="%{ldflags}"

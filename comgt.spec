@@ -3,7 +3,7 @@
 Summary:	GPRS/EDGE/3G/HSDPA datacard control tool
 Name:		comgt
 Version:	0.32
-Release:	%mkrel 10
+Release:	%mkrel 11
 Source0:	http://www.pharscape.org/3G/%{name}/%{name}.%{version}.tgz
 Patch0:		comgt-0.32-string-format.patch
 Patch1:		comgt-0.32-fix-man-page-typo.patch
@@ -13,6 +13,7 @@ URL:		http://pharscape.org/comgt.html
 BuildRoot:	%{_tmppath}/%{name}-%{version}-%{release}-buildroot
 Provides:	%{old_name}
 Obsoletes:	%{old_name}
+Requires:	usb_modeswitch
 
 %description
 comgt is a datacard control tool for Option GlobeTrotter

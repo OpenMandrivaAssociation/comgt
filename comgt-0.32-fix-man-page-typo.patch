@@ -1,0 +1,13 @@
+diff -p -up comgt.0.32/comgt.1~ comgt.0.32/comgt.1
+--- comgt.0.32/comgt.1~	2006-10-20 16:49:46.000000000 +0200
++++ comgt.0.32/comgt.1	2010-03-29 10:24:01.540801152 +0200
+@@ -19,7 +19,7 @@ set the device to be used to communicate
+ If not specified then comgt trys
+ .I /dev/noz2, /dev/ttyUSB2
+ and then 
+-.I/dev/modem
++.I /dev/modem
+ .PP
+ .in +5
+ .B \-e 
+diff -p -up comgt.0.32/comgt.c.str_format~ comgt.0.32/comgt.c.str_format

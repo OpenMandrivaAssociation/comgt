@@ -3,7 +3,7 @@
 Summary:	GPRS/EDGE/3G/HSDPA datacard control tool
 Name:		comgt
 Version:	0.32
-Release:	16
+Release:	17
 License:	GPLv2+
 Group:		Communications
 Url:		http://pharscape.org/comgt.html

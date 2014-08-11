@@ -26,6 +26,7 @@ same type.
 %prep
 %setup -q -n %{name}.%{version}
 %apply_patches
+sed -i 's!cc!%{__cc}!g' Makefile
 
 %build
 %make CFLAGS="-c %{optflags}" LDFLAGS="%{ldflags}"

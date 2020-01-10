@@ -25,7 +25,7 @@ same type.
 
 %prep
 %setup -q -n %{name}.%{version}
-%apply_patches
+%autopatch -p1
 sed -i 's!cc!%{__cc}!g' Makefile
 
 %build

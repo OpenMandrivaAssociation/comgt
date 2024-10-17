@@ -6,7 +6,7 @@ Version:	0.32
 Release:	28
 License:	GPLv2+
 Group:		Communications
-Url:		http://pharscape.org/comgt.html
+Url:		https://pharscape.org/comgt.html
 Source0:	http://www.pharscape.org/3G/%{name}/%{name}.%{version}.tgz
 Patch0:		comgt-0.32-string-format.patch
 Patch1:		comgt-0.32-fix-man-page-typo.patch

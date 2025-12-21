@@ -12,6 +12,7 @@ Patch0:		comgt-0.32-string-format.patch
 Patch1:		comgt-0.32-fix-man-page-typo.patch
 Requires:	usb_modeswitch
 
+BuildRequires:	make
 %description
 comgt is a datacard control tool for Option GlobeTrotter
 GPRS/EDGE/3G/HSDPA and Vodafone 3G/GPRS.
